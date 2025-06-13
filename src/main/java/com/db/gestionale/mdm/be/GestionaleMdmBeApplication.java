@@ -1,4 +1,4 @@
-package com.db.gestionale_mdm_be;
+package com.db.gestionale.mdm.be;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
