@@ -19,6 +19,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
+      default_schema: ${DEFAULT_SCHEMA}
     show-sql: true
     database-platform: ${HIBERNATE_DIALECT}
 
@@ -34,3 +35,7 @@ logging:
       springframework: ${SPRING_LEVEL:INFO}
     com:
       db: ${LOG_LEVEL:DEBUG}
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
