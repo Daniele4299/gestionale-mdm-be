@@ -22,6 +22,6 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         MdmutenTab user = repository.findByUtenUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Utente non trovato"));
-        return new User(user.getUtenUsername(), user.getUtenPasswordHash(), user.getAuthorities());
+        return new User(user.getUtenUsername(), user.getUtenPassword(), user.getAuthorities());
     }
 }

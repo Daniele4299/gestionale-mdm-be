@@ -40,7 +40,7 @@ public class MdmutenTab implements UserDetails {
     private String utenUsername;
 
     @Column(name = "PASSWORD_HASH", nullable = false)
-    private String utenPasswordHash;
+    private String utenPassword;
 
     @Column(name = "NOME", nullable = false)
     private String utenNome;
@@ -69,7 +69,7 @@ public class MdmutenTab implements UserDetails {
 
     @Override
     public String getPassword() {
-        return utenPasswordHash;
+        return utenPassword;
     }
 
     @Override
